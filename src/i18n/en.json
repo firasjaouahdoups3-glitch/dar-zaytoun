@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "lang": "en",
+    "dir": "ltr",
+    "script": "latin",
+    "locale": "en_GB",
+    "intl_locale": "en-GB",
+    "price_format": "€{price}",
+    "decimal_separator": "."
+  },
+
+  "seo": {
+    "title": "Dar Zaytoun — Mediterranean Restaurant in Marseille",
+    "description": "Dar Zaytoun is a Mediterranean table in the heart of Marseille: mezze, tagines and grilled fish, seasonal produce and olive oil from our partner groves. Book your table online.",
+    "cuisine": "Mediterranean"
+  },
+
+  "brand": {
+    "name": "Dar Zaytoun"
+  },
+
+  "a11y": {
+    "skip_link": "Skip to main content",
+    "home": "Dar Zaytoun, back to home",
+    "main_nav": "Main navigation",
+    "footer_nav": "Footer navigation",
+    "lang_nav": "Choose language",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "close": "Close"
+  },
+
+  "nav": {
+    "about": "About",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "info": "Visit us",
+    "booking": "Book"
+  },
+
+  "hero": {
+    "eyebrow": "Mediterranean cuisine · Marseille",
+    "title": "Dar Zaytoun",
+    "tagline": "The house of the olive tree: generous cooking that connects both shores of the Mediterranean, from Tunis to Valencia.",
+    "cta_primary": "Book a table",
+    "cta_secondary": "See the menu",
+    "image_alt": "A Moorish arch opening onto the sea at sunset, framed by an olive branch."
+  },
+
+  "about": {
+    "eyebrow": "Our house",
+    "title": "Food for sharing, born under the olive tree",
+    "paragraphs": [
+      "“Zaytoun” means olive in Arabic. Chef Leïla Mansour built Dar Zaytoun around this tree: a house where plates are shared the way stories are.",
+      "Every morning we cook with produce from the market, fish from the harbour auction and cold-pressed olive oil from our partner groves. Our recipes travel between the Maghreb, Greece, Andalusia and Provence, never forgetting the taste of simple things."
+    ],
+    "signature": "Leïla Mansour, chef and founder",
+    "image_alt": "Illustration of an old olive tree with gnarled branches, framed by an arch.",
+    "highlights": [
+      { "value": "2012", "label": "The year we opened" },
+      { "value": "80%", "label": "Local, seasonal produce" },
+      { "value": "100%", "label": "Homemade, from bread to desserts" }
+    ]
+  },
+
+  "menu": {
+    "eyebrow": "The menu",
+    "title": "Flavours from both shores",
+    "intro": "A short menu that changes with the seasons. Our dishes are made to be shared in the middle of the table.",
+    "note": "Prices in euros, service included. Allergen information available on request: please let us know about any intolerance.",
+    "veg_label": "Vegetarian",
+    "categories": {
+      "starters": "Starters",
+      "mains": "Mains",
+      "desserts": "Desserts"
+    },
+    "items": {
+      "mezze": { "name": "House mezze", "desc": "Hummus, smoky aubergine moutabal, parsley tabbouleh and warm pita bread." },
+      "fattoush": { "name": "Fattoush salad", "desc": "Crunchy vegetables, radish, toasted bread, sumac and pomegranate molasses." },
+      "brick": { "name": "Egg brik", "desc": "Crisp pastry, runny egg, tuna, capers and mild harissa." },
+      "calamari": { "name": "Grilled squid", "desc": "Chermoula, preserved lemon and roasted chickpeas." },
+      "tagine": { "name": "Lamb tagine", "desc": "Slow-cooked for seven hours with prunes, toasted almonds and sesame seeds." },
+      "couscous": { "name": "Seven-vegetable couscous", "desc": "Hand-rolled semolina, broth scented with ras el hanout." },
+      "sea_bream": { "name": "Grilled gilt-head bream", "desc": "Fresh from the harbour, roasted fennel, virgin olive oil and fresh herbs." },
+      "chicken": { "name": "Chicken m'hammer", "desc": "Free-range chicken with preserved lemon, purple olives and melting potatoes." },
+      "baklava": { "name": "Pistachio baklava", "desc": "Filo pastry, Aleppo pistachios and orange blossom syrup." },
+      "mhalabia": { "name": "Rose mhalabia", "desc": "Milk pudding scented with rose water, pistachios and petals." },
+      "oranges": { "name": "Cinnamon oranges", "desc": "Orange segments, cinnamon, fresh mint and dates." },
+      "gazelle": { "name": "Gazelle horns & tea", "desc": "Almond pastries served with mint tea." }
+    }
+  },
+
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "A taste of the house",
+    "intro": "A few moments at Dar Zaytoun, between the kitchen and the terrace.",
+    "open_label": "Enlarge image",
+    "dialog_label": "Gallery viewer",
+    "prev": "Previous image",
+    "next": "Next image",
+    "items": {
+      "terrace": { "caption": "The terrace at sunset", "alt": "An arch opening onto the sea at sunset, with an olive branch." },
+      "mezze": { "caption": "Mezze to share", "alt": "Top view of several colourful mezze bowls: hummus, tabbouleh, olives and pita bread." },
+      "oil": { "caption": "Our olive oil", "alt": "A bottle of olive oil, a small dish and an olive branch laden with olives." },
+      "tagine": { "caption": "Today's tagine", "alt": "A decorated terracotta tagine with steam rising from it." },
+      "spices": { "caption": "Spices and citrus", "alt": "Lemons and three mounds of spices: paprika, turmeric and cumin." },
+      "zellige": { "caption": "Zellige tiles in the dining room", "alt": "Geometric star-shaped zellige pattern in olive, terracotta and saffron colours." }
+    }
+  },
+
+  "info": {
+    "eyebrow": "Visit us",
+    "title": "Come and see us",
+    "hours_title": "Opening hours",
+    "hours": [
+      { "days": "Monday", "time": "Closed" },
+      { "days": "Tuesday – Friday", "time": "12pm – 2:30pm · 7pm – 10:30pm" },
+      { "days": "Saturday – Sunday", "time": "12pm – 11pm, all-day service" }
+    ],
+    "address_title": "Address",
+    "address_lines": ["18 quai des Oliviers", "13007 Marseille, France"],
+    "access": "Vieux-Port metro station, a 5-minute walk away. Wheelchair accessible.",
+    "contact_title": "Contact",
+    "phone_label": "Phone",
+    "email_label": "Email"
+  },
+
+  "booking": {
+    "eyebrow": "Reservations",
+    "title": "Book your table",
+    "intro": "Fill in this form and we will confirm your booking by email as soon as possible. For groups of more than 12 people, please call us directly.",
+    "required_note": "Fields marked with * are required.",
+    "optional": "optional",
+    "fields": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "date": "Date",
+      "time": "Time",
+      "guests": "Number of guests",
+      "message": "Message (allergies, special occasion…)",
+      "consent": "I agree that my data will only be used to process my booking request."
+    },
+    "hints": {
+      "email": "Example: name@domain.com",
+      "time": "Between 12:00 and 22:30",
+      "guests": "From 1 to 12 guests"
+    },
+    "submit": "Send request",
+    "sending": "Sending…",
+    "errors": {
+      "required": "This field is required.",
+      "name": "Please enter at least 2 characters.",
+      "email": "Please enter a valid email address, e.g. name@domain.com.",
+      "phone": "Please enter a valid phone number.",
+      "date_past": "Please choose a date from today onwards.",
+      "date_closed": "The restaurant is closed on Mondays: please choose another day.",
+      "time": "Please choose a time between 12:00 and 22:30.",
+      "guests": "The number of guests must be between 1 and 12.",
+      "consent": "Please accept the use of your data to continue.",
+      "summary": "The form contains {count} error(s). Please correct the highlighted fields."
+    },
+    "success": "Thank you {name}! Your request for {date} at {time} ({guests} guests) has been sent. You will receive a confirmation by email.",
+    "demo_note": "Demo website: no data is actually sent."
+  },
+
+  "footer": {
+    "tagline": "Mediterranean food for sharing, in the heart of Marseille.",
+    "nav_title": "Navigation",
+    "contact_title": "Contact",
+    "rights": "All rights reserved.",
+    "fictional": "Fictional restaurant, created as a portfolio project.",
+    "back_to_top": "Back to top"
+  },
+
+  "not_found": {
+    "title": "Page not found",
+    "link": "Back to home"
+  }
+}

@@ -1,0 +1,9 @@
+# dist/ est régénéré par build.py (localement ou par GitHub Actions).
+# Si vous publiez dist/ à la main (option B du README), supprimez cette ligne.
+dist/
+
+__pycache__/
+.DS_Store
+
+# Archive de téléchargement
+*.zip

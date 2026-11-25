@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Tuile de motif répétée en fond de la section « Infos pratiques » -->
+  <g fill="none" stroke="#FBF7EF" stroke-width="2">
+    <rect x="35" y="35" width="50" height="50"/>
+    <rect x="35" y="35" width="50" height="50" transform="rotate(45 60 60)"/>
+    <circle cx="60" cy="60" r="10"/>
+    <path d="M0 0l15 15M120 0l-15 15M0 120l15-15M120 120l-15-15"/>
+  </g>
+</svg>

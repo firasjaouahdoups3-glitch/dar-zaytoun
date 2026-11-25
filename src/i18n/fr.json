@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "lang": "fr",
+    "dir": "ltr",
+    "script": "latin",
+    "locale": "fr_FR",
+    "intl_locale": "fr-FR",
+    "price_format": "{price} €",
+    "decimal_separator": ","
+  },
+
+  "seo": {
+    "title": "Dar Zaytoun — Restaurant méditerranéen à Marseille",
+    "description": "Dar Zaytoun, table méditerranéenne au cœur de Marseille : mezze, tajines et poissons grillés, produits de saison et huile d'olive de nos oliveraies partenaires. Réservez en ligne.",
+    "cuisine": "Méditerranéenne"
+  },
+
+  "brand": {
+    "name": "Dar Zaytoun"
+  },
+
+  "a11y": {
+    "skip_link": "Aller au contenu principal",
+    "home": "Dar Zaytoun, retour à l'accueil",
+    "main_nav": "Navigation principale",
+    "footer_nav": "Navigation du pied de page",
+    "lang_nav": "Choisir la langue",
+    "menu_open": "Ouvrir le menu",
+    "menu_close": "Fermer le menu",
+    "close": "Fermer"
+  },
+
+  "nav": {
+    "about": "À propos",
+    "menu": "Menu",
+    "gallery": "Galerie",
+    "info": "Infos pratiques",
+    "booking": "Réserver"
+  },
+
+  "hero": {
+    "eyebrow": "Cuisine méditerranéenne · Marseille",
+    "title": "Dar Zaytoun",
+    "tagline": "La maison de l'olivier : une cuisine généreuse qui relie les deux rives de la Méditerranée, de Tunis à Valence.",
+    "cta_primary": "Réserver une table",
+    "cta_secondary": "Découvrir le menu",
+    "image_alt": "Une arche mauresque ouverte sur la mer au coucher du soleil, encadrée par une branche d'olivier."
+  },
+
+  "about": {
+    "eyebrow": "Notre maison",
+    "title": "Une cuisine de partage, née sous l'olivier",
+    "paragraphs": [
+      "« Zaytoun » signifie olive en arabe. C'est autour de cet arbre que la cheffe Leïla Mansour a imaginé Dar Zaytoun : une maison où l'on partage les assiettes comme on partage une histoire.",
+      "Chaque matin, nous travaillons les produits du marché, les poissons de la criée et une huile d'olive pressée à froid par nos oliveraies partenaires. Les recettes voyagent entre le Maghreb, la Grèce, l'Andalousie et la Provence, sans jamais oublier le goût du simple."
+    ],
+    "signature": "Leïla Mansour, cheffe et fondatrice",
+    "image_alt": "Illustration d'un vieil olivier aux branches noueuses, encadré par une arche.",
+    "highlights": [
+      { "value": "2012", "label": "Ouverture de la maison" },
+      { "value": "80 %", "label": "Produits locaux et de saison" },
+      { "value": "100 %", "label": "Fait maison, du pain aux desserts" }
+    ]
+  },
+
+  "menu": {
+    "eyebrow": "La carte",
+    "title": "Saveurs des deux rives",
+    "intro": "Une carte courte qui évolue au fil des saisons. Nos plats se partagent volontiers au centre de la table.",
+    "note": "Prix nets en euros, service compris. Liste des allergènes sur demande : n'hésitez pas à nous signaler toute intolérance.",
+    "veg_label": "Végétarien",
+    "categories": {
+      "starters": "Entrées",
+      "mains": "Plats",
+      "desserts": "Desserts"
+    },
+    "items": {
+      "mezze": { "name": "Mezze de la maison", "desc": "Houmous, moutabal aux aubergines fumées, taboulé au persil et pain pita chaud." },
+      "fattoush": { "name": "Salade fattoush", "desc": "Légumes croquants, radis, pain grillé, sumac et mélasse de grenade." },
+      "brick": { "name": "Brick à l'œuf", "desc": "Feuille croustillante, œuf coulant, thon, câpres et harissa douce." },
+      "calamari": { "name": "Calamars grillés", "desc": "Chermoula, citron confit et pois chiches rôtis." },
+      "tagine": { "name": "Tajine d'agneau", "desc": "Mijoté sept heures, pruneaux, amandes grillées et graines de sésame." },
+      "couscous": { "name": "Couscous aux sept légumes", "desc": "Semoule roulée à la main, bouillon parfumé au ras el-hanout." },
+      "sea_bream": { "name": "Daurade royale grillée", "desc": "Poisson de la criée, fenouil rôti, huile d'olive vierge et herbes fraîches." },
+      "chicken": { "name": "Poulet m'hammer", "desc": "Poulet fermier au citron confit, olives violettes et pommes de terre fondantes." },
+      "baklava": { "name": "Baklava à la pistache", "desc": "Feuilles de filo, pistaches d'Alep et sirop à la fleur d'oranger." },
+      "mhalabia": { "name": "Mhalabia à la rose", "desc": "Crème de lait parfumée à l'eau de rose, pistaches et pétales." },
+      "oranges": { "name": "Oranges à la cannelle", "desc": "Suprêmes d'oranges, cannelle, menthe fraîche et dattes." },
+      "gazelle": { "name": "Cornes de gazelle & thé", "desc": "Pâtisseries aux amandes, servies avec un thé à la menthe." }
+    }
+  },
+
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Un avant-goût de la maison",
+    "intro": "Quelques instants de Dar Zaytoun, entre la cuisine et la terrasse.",
+    "open_label": "Agrandir l'image",
+    "dialog_label": "Visionneuse de la galerie",
+    "prev": "Image précédente",
+    "next": "Image suivante",
+    "items": {
+      "terrace": { "caption": "La terrasse au coucher du soleil", "alt": "Une arche ouverte sur la mer au coucher du soleil, avec une branche d'olivier." },
+      "mezze": { "caption": "Mezze à partager", "alt": "Vue du dessus de plusieurs bols de mezze colorés : houmous, taboulé, olives et pain pita." },
+      "oil": { "caption": "Notre huile d'olive", "alt": "Une bouteille d'huile d'olive, une coupelle et une branche d'olivier chargée d'olives." },
+      "tagine": { "caption": "Le tajine du jour", "alt": "Un tajine en terre cuite décoré, d'où s'échappe de la vapeur." },
+      "spices": { "caption": "Épices et agrumes", "alt": "Des citrons et trois monticules d'épices : paprika, curcuma et cumin." },
+      "zellige": { "caption": "Les zelliges de la salle", "alt": "Motif géométrique de zellige en étoiles, aux couleurs olive, terre cuite et safran." }
+    }
+  },
+
+  "info": {
+    "eyebrow": "Infos pratiques",
+    "title": "Venez nous rendre visite",
+    "hours_title": "Horaires",
+    "hours": [
+      { "days": "Lundi", "time": "Fermé" },
+      { "days": "Mardi – Vendredi", "time": "12h – 14h30 · 19h – 22h30" },
+      { "days": "Samedi – Dimanche", "time": "12h – 23h, service continu" }
+    ],
+    "address_title": "Adresse",
+    "address_lines": ["18, quai des Oliviers", "13007 Marseille, France"],
+    "access": "Métro Vieux-Port, à 5 minutes à pied. Salle accessible aux personnes à mobilité réduite.",
+    "contact_title": "Contact",
+    "phone_label": "Téléphone",
+    "email_label": "E-mail"
+  },
+
+  "booking": {
+    "eyebrow": "Réservation",
+    "title": "Réservez votre table",
+    "intro": "Remplissez ce formulaire : nous vous confirmerons votre réservation par e-mail dans les plus brefs délais. Pour un groupe de plus de 12 personnes, appelez-nous directement.",
+    "required_note": "Les champs marqués d'un * sont obligatoires.",
+    "optional": "facultatif",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "date": "Date",
+      "time": "Heure",
+      "guests": "Nombre de personnes",
+      "message": "Message (allergies, occasion spéciale…)",
+      "consent": "J'accepte que mes données soient utilisées uniquement pour traiter ma demande de réservation."
+    },
+    "hints": {
+      "email": "Exemple : nom@domaine.fr",
+      "time": "Entre 12h00 et 22h30",
+      "guests": "De 1 à 12 personnes"
+    },
+    "submit": "Envoyer la demande",
+    "sending": "Envoi en cours…",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "name": "Indiquez au moins 2 caractères.",
+      "email": "Saisissez une adresse e-mail valide, par exemple nom@domaine.fr.",
+      "phone": "Saisissez un numéro de téléphone valide.",
+      "date_past": "Choisissez une date à partir d'aujourd'hui.",
+      "date_closed": "Le restaurant est fermé le lundi : choisissez un autre jour.",
+      "time": "Choisissez une heure entre 12h00 et 22h30.",
+      "guests": "Le nombre de personnes doit être compris entre 1 et 12.",
+      "consent": "Merci d'accepter l'utilisation de vos données pour continuer.",
+      "summary": "Le formulaire contient {count} erreur(s). Corrigez les champs indiqués."
+    },
+    "success": "Merci {name} ! Votre demande pour le {date} à {time} ({guests} pers.) a bien été envoyée. Vous recevrez une confirmation par e-mail.",
+    "demo_note": "Site de démonstration : aucune donnée n'est réellement envoyée."
+  },
+
+  "footer": {
+    "tagline": "Cuisine méditerranéenne de partage, au cœur de Marseille.",
+    "nav_title": "Navigation",
+    "contact_title": "Contact",
+    "rights": "Tous droits réservés.",
+    "fictional": "Restaurant fictif, réalisé comme projet de portfolio.",
+    "back_to_top": "Retour en haut"
+  },
+
+  "not_found": {
+    "title": "Page introuvable",
+    "link": "Retour à l'accueil"
+  }
+}

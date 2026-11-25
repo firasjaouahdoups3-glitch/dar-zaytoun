@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <!-- Illustration originale : motif zellige à étoiles à huit branches -->
+  <defs>
+    <pattern id="z" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="#F3EADA"/>
+      <!-- Étoile à 8 branches = deux carrés superposés -->
+      <g transform="translate(80 80)">
+        <rect x="-46" y="-46" width="92" height="92" fill="#55622F"/>
+        <rect x="-46" y="-46" width="92" height="92" fill="#55622F" transform="rotate(45)"/>
+        <rect x="-30" y="-30" width="60" height="60" fill="#E0B252"/>
+        <rect x="-30" y="-30" width="60" height="60" fill="#E0B252" transform="rotate(45)"/>
+        <circle r="16" fill="#A8462A"/>
+      </g>
+      <!-- Croix entre les étoiles (aux coins de la tuile) -->
+      <g fill="#A8462A">
+        <rect x="-14" y="-14" width="28" height="28" transform="rotate(45)"/>
+        <rect x="146" y="-14" width="28" height="28" transform="rotate(45 160 0)"/>
+        <rect x="-14" y="146" width="28" height="28" transform="rotate(45 0 160)"/>
+        <rect x="146" y="146" width="28" height="28" transform="rotate(45 160 160)"/>
+      </g>
+      <g stroke="#2E3520" stroke-width="3" fill="none" opacity=".35">
+        <path d="M0 80h20M140 80h20M80 0v20M80 140v20"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#z)"/>
+</svg>

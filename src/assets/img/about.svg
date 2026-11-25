@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Illustration originale : vieil olivier dans un patio, sous une arche -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3EADA"/>
+      <stop offset="1" stop-color="#E7DAC2"/>
+    </linearGradient>
+    <path id="l" d="M0 0C14-10 40-10 62 0 40 10 14 10 0 0Z"/>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="540" cy="300" r="150" fill="#E0B252" opacity=".55"/>
+
+  <!-- Sol en tomettes -->
+  <path d="M0 820H800V1000H0z" fill="#C8643F"/>
+  <g stroke="#A8462A" stroke-width="3" opacity=".7">
+    <path d="M0 870H800M0 930H800"/>
+    <path d="M100 820l-40 180M260 820l-30 180M420 820v180M580 820l30 180M740 820l40 180"/>
+  </g>
+
+  <!-- Tronc noueux -->
+  <path d="M370 830c-10-80 20-130 0-210-14-60-60-90-40-160 10 40 50 60 70 110 14-60 0-110 30-170 10 70 40 110 20 190-12 60 10 110 20 160 8 40 0 60 10 80z"
+        fill="#5A4330"/>
+  <path d="M390 700c-6-40 6-80 0-120M420 760c4-50-10-90 4-140" stroke="#3B2A1E" stroke-width="5" fill="none" stroke-linecap="round" opacity=".6"/>
+
+  <!-- Feuillage : grappes de feuilles en deux tons -->
+  <g fill="#55622F">
+    <ellipse cx="400" cy="380" rx="230" ry="150"/>
+    <ellipse cx="270" cy="440" rx="130" ry="90"/>
+    <ellipse cx="540" cy="430" rx="140" ry="95"/>
+  </g>
+  <g fill="#6E7D3A">
+    <use href="#l" transform="translate(220 360) rotate(-20)"/>
+    <use href="#l" transform="translate(300 300) rotate(15)"/>
+    <use href="#l" transform="translate(400 270) rotate(-30)"/>
+    <use href="#l" transform="translate(490 320) rotate(25)"/>
+    <use href="#l" transform="translate(560 400) rotate(-15)"/>
+    <use href="#l" transform="translate(350 420) rotate(35)"/>
+    <use href="#l" transform="translate(440 460) rotate(-25)"/>
+    <use href="#l" transform="translate(190 470) rotate(10)"/>
+    <use href="#l" transform="translate(600 470) rotate(40)"/>
+  </g>
+  <g fill="#A9B57A">
+    <use href="#l" transform="translate(260 400) rotate(50)"/>
+    <use href="#l" transform="translate(380 340) rotate(-50)"/>
+    <use href="#l" transform="translate(470 380) rotate(20)"/>
+    <use href="#l" transform="translate(530 290) rotate(-10)"/>
+    <use href="#l" transform="translate(320 490) rotate(-30)"/>
+  </g>
+  <g fill="#2E3520">
+    <circle cx="300" cy="460" r="10"/><circle cx="318" cy="470" r="9"/>
+    <circle cx="500" cy="440" r="10"/><circle cx="430" cy="330" r="9"/>
+  </g>
+
+  <!-- Jarre en terre cuite -->
+  <path d="M600 830c-40 0-60-40-50-90 6-30 20-50 20-70h60c0 20 14 40 20 70 10 50-10 90-50 90z" fill="#A8462A"/>
+  <path d="M566 670h68" stroke="#8E3A22" stroke-width="8" stroke-linecap="round"/>
+  <path d="M562 740c26 10 50 10 76 0" stroke="#E0B252" stroke-width="3" fill="none"/>
+</svg>

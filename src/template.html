@@ -1,0 +1,411 @@
+<!doctype html>
+{#
+  GABARIT UNIQUE — ne pas modifier dist/ à la main : relancer « python3 build.py ».
+  {{ cle }}          texte traduit (échappé)
+  {{{ cle }}}        valeur brute (réservée au JSON-LD généré par build.py)
+  {% for x in liste %} … {% endfor %}     boucle
+  {% if cle %} … {% else %} … {% endif %} condition
+  Ce bloc est un commentaire de gabarit : il n'apparaît pas dans dist/.
+#}
+<html lang="{{ lang }}" dir="{{ dir }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ seo.title }}</title>
+  <meta name="description" content="{{ seo.description }}">
+  <meta name="theme-color" content="#2E3520">
+
+  <!-- SEO multilingue : URL canonique + une alternative par langue -->
+  <link rel="canonical" href="{{ page.url }}">
+{% for l in languages %}  <link rel="alternate" hreflang="{{ l.code }}" href="{{ l.abs_url }}">
+{% endfor %}  <link rel="alternate" hreflang="x-default" href="{{ page.default_url }}">
+
+  <!-- Partage sur les réseaux sociaux (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ brand.name }}">
+  <meta property="og:title" content="{{ seo.title }}">
+  <meta property="og:description" content="{{ seo.description }}">
+  <meta property="og:url" content="{{ page.url }}">
+  <meta property="og:locale" content="{{ _meta.locale }}">
+{% for l in languages %}{% if not l.current %}  <meta property="og:locale:alternate" content="{{ l.locale }}">
+{% endif %}{% endfor %}
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Polices : famille latine OU arabe selon la langue (voir site.json > fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="{{ page.fonts_url }}">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Remplace « no-js » par « js » : les animations ne s'activent que si JS fonctionne -->
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script src="../assets/js/main.js" defer></script>
+
+  <!-- Données structurées (schema.org/Restaurant), générées par build.py -->
+  <script type="application/ld+json">
+{{{ json_ld }}}
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">{{ a11y.skip_link }}</a>
+
+  <!-- ===================== EN-TÊTE ===================== -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="{{ a11y.home }}">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 27c4-9 10-14 17-15-2 7-8 13-17 15z" fill="currentColor" opacity=".9"/>
+          <circle cx="15.5" cy="16" r="3.2" fill="var(--c-saffron-400)"/>
+        </svg>
+        <span class="brand__name">{{ brand.name }}</span>
+      </a>
+
+      <!-- Bouton du menu mobile (placé AVANT la nav pour un ordre de tabulation logique) -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"
+              data-nav-toggle data-label-open="{{ a11y.menu_open }}" data-label-close="{{ a11y.menu_close }}">
+        <span class="visually-hidden" data-nav-toggle-label>{{ a11y.menu_open }}</span>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="{{ a11y.main_nav }}" data-nav>
+        <ul class="main-nav__list" role="list">
+          <li><a class="main-nav__link" href="#about" data-nav-link>{{ nav.about }}</a></li>
+          <li><a class="main-nav__link" href="#menu" data-nav-link>{{ nav.menu }}</a></li>
+          <li><a class="main-nav__link" href="#gallery" data-nav-link>{{ nav.gallery }}</a></li>
+          <li><a class="main-nav__link" href="#info" data-nav-link>{{ nav.info }}</a></li>
+          <li class="main-nav__cta"><a class="btn btn--primary btn--small" href="#booking">{{ nav.booking }}</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sélecteur de langue : JS y ajoute l'ancre de la section visible (#menu…) -->
+      <nav class="lang-switch" aria-label="{{ a11y.lang_nav }}">
+        <ul class="lang-switch__list" role="list">
+{% for l in languages %}          <li>
+            <a class="lang-switch__link" href="{{ l.url }}" hreflang="{{ l.code }}" lang="{{ l.code }}" dir="{{ l.dir }}"{% if l.current %} aria-current="page"{% endif %} data-lang-link>
+              <span aria-hidden="true">{{ l.label }}</span><span class="visually-hidden">{{ l.name }}</span>
+            </a>
+          </li>
+{% endfor %}        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ===================== 1. ACCUEIL ===================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img src="../assets/img/hero.svg" alt="{{ hero.image_alt }}" width="1600" height="1000" fetchpriority="high">
+      </div>
+      <div class="container hero__content">
+        <p class="eyebrow eyebrow--light hero__anim">{{ hero.eyebrow }}</p>
+        <h1 class="hero__title hero__anim" id="hero-title">{{ hero.title }}</h1>
+        <p class="hero__tagline hero__anim">{{ hero.tagline }}</p>
+        <div class="hero__actions hero__anim">
+          <a class="btn btn--primary" href="#booking">
+            {{ hero.cta_primary }}
+            <svg class="icon icon--flip" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#menu">{{ hero.cta_secondary }}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. À PROPOS ===================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__text reveal">
+          <p class="eyebrow">{{ about.eyebrow }}</p>
+          <h2 class="section-title" id="about-title">{{ about.title }}</h2>
+{% for p in about.paragraphs %}          <p>{{ p }}</p>
+{% endfor %}          <p class="about__signature">— {{ about.signature }}</p>
+        </div>
+        <figure class="about__media reveal">
+          <img src="../assets/img/about.svg" alt="{{ about.image_alt }}" width="800" height="1000" loading="lazy">
+        </figure>
+      </div>
+      <ul class="container highlights" role="list">
+{% for h in about.highlights %}        <li class="highlight reveal">
+          <span class="highlight__value">{{ h.value }}</span>
+          <span class="highlight__label">{{ h.label }}</span>
+        </li>
+{% endfor %}      </ul>
+    </section>
+
+    <!-- ===================== 3. MENU ===================== -->
+    <section class="section section--alt menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">{{ menu.eyebrow }}</p>
+          <h2 class="section-title" id="menu-title">{{ menu.title }}</h2>
+          <p class="section-intro">{{ menu.intro }}</p>
+        </header>
+
+        <div class="menu__categories">
+{% for cat in menu_categories %}          <div class="menu-category reveal">
+            <h3 class="menu-category__title" id="menu-{{ cat.id }}">{{ cat.title }}</h3>
+            <ul class="menu-list" role="list" aria-labelledby="menu-{{ cat.id }}">
+{% for item in cat.items %}              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h4 class="menu-item__name">{{ item.name }}</h4>
+                  <span class="menu-item__leader" aria-hidden="true"></span>
+                  <span class="menu-item__price" dir="ltr">{{ item.price }}</span>
+                </div>
+                <p class="menu-item__desc">{{ item.desc }}</p>
+{% if item.veg %}                <span class="badge">{{ menu.veg_label }}</span>
+{% endif %}              </li>
+{% endfor %}            </ul>
+          </div>
+{% endfor %}        </div>
+        <p class="menu__note reveal">{{ menu.note }}</p>
+      </div>
+    </section>
+
+    <!-- ===================== 4. GALERIE ===================== -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">{{ gallery.eyebrow }}</p>
+          <h2 class="section-title" id="gallery-title">{{ gallery.title }}</h2>
+          <p class="section-intro">{{ gallery.intro }}</p>
+        </header>
+
+        <ul class="gallery-grid" role="list">
+{% for g in gallery_items %}          <li class="gallery-grid__item gallery-grid__item--{{ g.layout }} reveal">
+            <figure class="gallery-card">
+              <button class="gallery-card__button" type="button" aria-haspopup="dialog"
+                      data-gallery-src="../assets/img/{{ g.file }}" data-gallery-alt="{{ g.alt }}" data-gallery-caption="{{ g.caption }}">
+                <img src="../assets/img/{{ g.file }}" alt="{{ g.alt }}" width="{{ g.width }}" height="{{ g.height }}" loading="lazy">
+                <span class="visually-hidden">— {{ gallery.open_label }}</span>
+              </button>
+              <figcaption class="gallery-card__caption">{{ g.caption }}</figcaption>
+            </figure>
+          </li>
+{% endfor %}        </ul>
+      </div>
+
+      <!-- Visionneuse : <dialog> natif = piège du focus + touche Échap gérés par le navigateur -->
+      <dialog class="lightbox" aria-label="{{ gallery.dialog_label }}" data-lightbox>
+        <figure class="lightbox__figure">
+          <img class="lightbox__img" src="../assets/img/{{ gallery_items.0.file }}" alt="" data-lightbox-img>
+          <figcaption class="lightbox__caption">
+            <span data-lightbox-caption></span>
+            <span class="lightbox__counter" data-lightbox-counter></span>
+          </figcaption>
+        </figure>
+        <button class="lightbox__btn lightbox__btn--prev" type="button" data-lightbox-prev>
+          <svg class="icon icon--flip" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="visually-hidden">{{ gallery.prev }}</span>
+        </button>
+        <button class="lightbox__btn lightbox__btn--next" type="button" data-lightbox-next>
+          <svg class="icon icon--flip" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="visually-hidden">{{ gallery.next }}</span>
+        </button>
+        <button class="lightbox__btn lightbox__btn--close" type="button" data-lightbox-close>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="visually-hidden">{{ a11y.close }}</span>
+        </button>
+      </dialog>
+    </section>
+
+    <!-- ===================== 5. HORAIRES & ADRESSE ===================== -->
+    <section class="section section--dark info" id="info" aria-labelledby="info-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow--light">{{ info.eyebrow }}</p>
+          <h2 class="section-title" id="info-title">{{ info.title }}</h2>
+        </header>
+
+        <div class="info__grid">
+          <div class="info-card reveal">
+            <h3 class="info-card__title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              {{ info.hours_title }}
+            </h3>
+            <dl class="hours">
+{% for h in info.hours %}              <div class="hours__row">
+                <dt>{{ h.days }}</dt>
+                <dd>{{ h.time }}</dd>
+              </div>
+{% endfor %}            </dl>
+          </div>
+
+          <div class="info-card reveal">
+            <h3 class="info-card__title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              {{ info.address_title }}
+            </h3>
+            <address class="info-card__address">
+{% for line in info.address_lines %}              <span>{{ line }}</span>
+{% endfor %}            </address>
+            <p class="info-card__muted">{{ info.access }}</p>
+          </div>
+
+          <div class="info-card reveal">
+            <h3 class="info-card__title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              {{ info.contact_title }}
+            </h3>
+            <ul class="contact-list" role="list">
+              <li>
+                <span class="contact-list__label">{{ info.phone_label }}</span>
+                <a href="tel:{{ site.contact.phone_href }}"><span dir="ltr">{{ site.contact.phone }}</span></a>
+              </li>
+              <li>
+                <span class="contact-list__label">{{ info.email_label }}</span>
+                <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. RÉSERVATION ===================== -->
+    <section class="section booking" id="booking" aria-labelledby="booking-title">
+      <div class="container booking__grid">
+        <div class="booking__intro reveal">
+          <p class="eyebrow">{{ booking.eyebrow }}</p>
+          <h2 class="section-title" id="booking-title">{{ booking.title }}</h2>
+          <p>{{ booking.intro }}</p>
+          <p class="booking__phone">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <a href="tel:{{ site.contact.phone_href }}"><span dir="ltr">{{ site.contact.phone }}</span></a>
+          </p>
+        </div>
+
+        <!--
+          novalidate : on désactive les bulles natives (non traduisibles, peu accessibles)
+          au profit de messages traduits gérés par main.js. Les attributs required/min/max
+          restent présents : ils servent aux lecteurs d'écran et de repli sans JS.
+        -->
+        <form class="booking-form reveal" action="#" method="post" novalidate data-booking-form
+              data-locale="{{ _meta.intl_locale }}"
+              data-closed-day="{{ site.booking.closed_weekday }}"
+              data-msg-required="{{ booking.errors.required }}"
+              data-msg-name="{{ booking.errors.name }}"
+              data-msg-email="{{ booking.errors.email }}"
+              data-msg-phone="{{ booking.errors.phone }}"
+              data-msg-date-past="{{ booking.errors.date_past }}"
+              data-msg-date-closed="{{ booking.errors.date_closed }}"
+              data-msg-time="{{ booking.errors.time }}"
+              data-msg-guests="{{ booking.errors.guests }}"
+              data-msg-consent="{{ booking.errors.consent }}"
+              data-msg-summary="{{ booking.errors.summary }}"
+              data-msg-success="{{ booking.success }}"
+              data-msg-sending="{{ booking.sending }}">
+
+          <p class="booking-form__required-note">{{ booking.required_note }}</p>
+
+          <div class="form-grid">
+            <div class="field field--full">
+              <label class="field__label" for="f-name">{{ booking.fields.name }} <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-error">
+              <p class="field__error" id="f-name-error" data-error-for="f-name"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-email">{{ booking.fields.email }} <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-hint f-email-error" dir="ltr">
+              <p class="field__hint" id="f-email-hint">{{ booking.hints.email }}</p>
+              <p class="field__error" id="f-email-error" data-error-for="f-email"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-phone">{{ booking.fields.phone }} <span class="field__optional">({{ booking.optional }})</span></label>
+              <input class="field__input" id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="f-phone-error" dir="ltr">
+              <p class="field__error" id="f-phone-error" data-error-for="f-phone"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-date">{{ booking.fields.date }} <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-date" name="date" type="date" required aria-describedby="f-date-error">
+              <p class="field__error" id="f-date-error" data-error-for="f-date"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-time">{{ booking.fields.time }} <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="f-time" name="time" type="time" min="{{ site.booking.min_time }}" max="{{ site.booking.max_time }}" step="900" required aria-describedby="f-time-hint f-time-error">
+              <p class="field__hint" id="f-time-hint">{{ booking.hints.time }}</p>
+              <p class="field__error" id="f-time-error" data-error-for="f-time"></p>
+            </div>
+
+            <div class="field field--full">
+              <label class="field__label" for="f-guests">{{ booking.fields.guests }} <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input field__input--short" id="f-guests" name="guests" type="number" inputmode="numeric" min="1" max="{{ site.booking.max_guests }}" value="2" required aria-describedby="f-guests-hint f-guests-error">
+              <p class="field__hint" id="f-guests-hint">{{ booking.hints.guests }}</p>
+              <p class="field__error" id="f-guests-error" data-error-for="f-guests"></p>
+            </div>
+
+            <div class="field field--full">
+              <label class="field__label" for="f-message">{{ booking.fields.message }} <span class="field__optional">({{ booking.optional }})</span></label>
+              <textarea class="field__input field__textarea" id="f-message" name="message" rows="4" maxlength="500"></textarea>
+            </div>
+
+            <div class="field field--full field--checkbox">
+              <input class="field__checkbox" id="f-consent" name="consent" type="checkbox" required aria-describedby="f-consent-error">
+              <label for="f-consent">{{ booking.fields.consent }} <span class="field__req" aria-hidden="true">*</span></label>
+              <p class="field__error" id="f-consent-error" data-error-for="f-consent"></p>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit" data-submit>
+            <span data-submit-label>{{ booking.submit }}</span>
+          </button>
+
+          <!-- Zone annoncée par les lecteurs d'écran (erreurs globales / succès) -->
+          <div class="form-status" role="status" aria-live="polite" data-form-status></div>
+          <p class="booking-form__demo">{{ booking.demo_note }}</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== 7. PIED DE PAGE ===================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <p class="brand brand--footer">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 27c4-9 10-14 17-15-2 7-8 13-17 15z" fill="currentColor" opacity=".9"/>
+            <circle cx="15.5" cy="16" r="3.2" fill="var(--c-saffron-400)"/>
+          </svg>
+          <span class="brand__name">{{ brand.name }}</span>
+        </p>
+        <p class="site-footer__tagline">{{ footer.tagline }}</p>
+      </div>
+
+      <nav aria-label="{{ a11y.footer_nav }}">
+        <h2 class="site-footer__title">{{ footer.nav_title }}</h2>
+        <ul class="site-footer__links" role="list">
+          <li><a href="#about">{{ nav.about }}</a></li>
+          <li><a href="#menu">{{ nav.menu }}</a></li>
+          <li><a href="#gallery">{{ nav.gallery }}</a></li>
+          <li><a href="#info">{{ nav.info }}</a></li>
+          <li><a href="#booking">{{ nav.booking }}</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__title">{{ footer.contact_title }}</h2>
+        <address class="site-footer__address">
+{% for line in info.address_lines %}          <span>{{ line }}</span>
+{% endfor %}          <a href="tel:{{ site.contact.phone_href }}"><span dir="ltr">{{ site.contact.phone }}</span></a>
+          <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+        </address>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© {{ year }} {{ brand.name }}. {{ footer.rights }} {{ footer.fictional }}</p>
+      <a class="site-footer__top" href="#top">
+        {{ footer.back_to_top }}
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

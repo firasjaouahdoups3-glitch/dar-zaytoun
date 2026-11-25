@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Illustration originale Dar Zaytoun : arche mauresque ouverte sur la mer au couchant -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A4228"/>
+      <stop offset=".45" stop-color="#A8462A"/>
+      <stop offset=".75" stop-color="#E0A04A"/>
+      <stop offset="1" stop-color="#F2CF7A"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6E6A3E"/>
+      <stop offset="1" stop-color="#2E3520"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFF1C4"/>
+      <stop offset=".6" stop-color="#F6D27A"/>
+      <stop offset="1" stop-color="#F6D27A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A3222"/>
+      <stop offset="1" stop-color="#2A1D14"/>
+    </linearGradient>
+    <path id="leaf" d="M0 0C22-15 62-15 96 0 62 15 22 15 0 0Z"/>
+  </defs>
+
+  <!-- Ciel, soleil, collines, mer -->
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="900" cy="610" r="210" fill="url(#sun)"/>
+  <circle cx="900" cy="610" r="92" fill="#FBE3A0"/>
+  <path d="M380 640c90-40 170-60 260-48 70 10 120 34 190 30 90-6 140-46 250-40 110 6 180 40 300 58v40H380z" fill="#55622F" opacity=".75"/>
+  <rect y="640" width="1600" height="360" fill="url(#sea)"/>
+  <g stroke="#F6D27A" stroke-linecap="round" opacity=".55">
+    <path d="M820 672h160" stroke-width="5"/>
+    <path d="M780 700h240" stroke-width="4"/>
+    <path d="M840 732h120" stroke-width="4"/>
+    <path d="M760 770h280" stroke-width="3"/>
+    <path d="M860 812h80" stroke-width="3"/>
+  </g>
+
+  <!-- Mur et arche en fer à cheval (règle evenodd = l'arche est « percée ») -->
+  <path fill="url(#wall)" fill-rule="evenodd"
+        d="M0 0H1600V1000H0Z M420 1000V560A390 390 0 1 1 1180 560V1000Z"/>
+  <path d="M420 1000V560A390 390 0 1 1 1180 560V1000" fill="none" stroke="#E0B252" stroke-width="6" opacity=".55"/>
+  <path d="M392 1000V560A418 418 0 1 1 1208 560V1000" fill="none" stroke="#A8462A" stroke-width="3" opacity=".6"/>
+
+  <!-- Rambarde en zellige au pied de l'arche -->
+  <g transform="translate(420 880)">
+    <rect width="760" height="120" fill="#2E3520"/>
+    <g fill="none" stroke="#E0B252" stroke-width="3" opacity=".7">
+      <path d="M0 20H760M0 100H760"/>
+      <path d="M40 60l20-20 20 20-20 20zM140 60l20-20 20 20-20 20zM240 60l20-20 20 20-20 20zM340 60l20-20 20 20-20 20zM440 60l20-20 20 20-20 20zM540 60l20-20 20 20-20 20zM640 60l20-20 20 20-20 20z"/>
+    </g>
+  </g>
+
+  <!-- Lanterne suspendue -->
+  <g transform="translate(800 150)">
+    <path d="M0-80V0" stroke="#E0B252" stroke-width="3"/>
+    <path d="M-28 10h56l-10 70h-36z" fill="#2E2117" stroke="#E0B252" stroke-width="3"/>
+    <path d="M-16 24h32l-6 44h-20z" fill="#F6D27A" opacity=".9"/>
+    <path d="M-34 10h68l-12-16h-44z" fill="#E0B252"/>
+  </g>
+
+  <!-- Branche d'olivier au premier plan -->
+  <g transform="translate(-30 40)">
+    <path d="M0 40C140 70 300 120 520 230" fill="none" stroke="#2E2117" stroke-width="9" stroke-linecap="round"/>
+    <g fill="#6E7D3A">
+      <use href="#leaf" transform="translate(70 52) rotate(-28)"/>
+      <use href="#leaf" transform="translate(110 62) rotate(32)"/>
+      <use href="#leaf" transform="translate(170 78) rotate(-22)"/>
+      <use href="#leaf" transform="translate(220 96) rotate(40)"/>
+      <use href="#leaf" transform="translate(280 112) rotate(-12)"/>
+      <use href="#leaf" transform="translate(330 140) rotate(48)"/>
+      <use href="#leaf" transform="translate(390 160) rotate(-4)"/>
+      <use href="#leaf" transform="translate(440 190) rotate(56)"/>
+    </g>
+    <g fill="#A9B57A" opacity=".85">
+      <use href="#leaf" transform="translate(140 70) rotate(60) scale(.8)"/>
+      <use href="#leaf" transform="translate(250 104) rotate(-40) scale(.8)"/>
+      <use href="#leaf" transform="translate(360 150) rotate(70) scale(.8)"/>
+      <use href="#leaf" transform="translate(480 210) rotate(10) scale(.85)"/>
+    </g>
+    <g fill="#2E3520">
+      <ellipse cx="200" cy="112" rx="14" ry="18"/>
+      <ellipse cx="226" cy="118" rx="13" ry="17"/>
+      <ellipse cx="372" cy="182" rx="14" ry="18"/>
+    </g>
+  </g>
+</svg>

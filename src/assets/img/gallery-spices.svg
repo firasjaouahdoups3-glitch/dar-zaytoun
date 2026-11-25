@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <!-- Illustration originale : citrons et monticules d'épices -->
+  <rect width="800" height="800" fill="#22201B"/>
+  <rect y="560" width="800" height="240" fill="#3B2A1E"/>
+  <path d="M0 560h800" stroke="#5A4330" stroke-width="6"/>
+
+  <!-- Épices : paprika, curcuma, cumin -->
+  <g>
+    <path d="M60 600c30-130 90-190 120-190s90 60 120 190z" fill="#A8462A"/>
+    <path d="M150 440c-20 40-40 90-50 150" stroke="#C8643F" stroke-width="10" fill="none" opacity=".6" stroke-linecap="round"/>
+    <path d="M270 600c30-160 100-220 130-220s100 60 130 220z" fill="#E0B252"/>
+    <path d="M370 420c-20 50-40 110-50 170" stroke="#F2CF7A" stroke-width="10" fill="none" opacity=".7" stroke-linecap="round"/>
+    <path d="M500 600c26-120 80-170 106-170s80 50 106 170z" fill="#8A5A2E"/>
+    <path d="M585 460c-16 36-30 80-38 130" stroke="#A9773F" stroke-width="10" fill="none" opacity=".7" stroke-linecap="round"/>
+  </g>
+  <g fill="#FBF7EF" opacity=".15"><rect x="50" y="596" width="700" height="10" rx="5"/></g>
+
+  <!-- Citrons -->
+  <g>
+    <ellipse cx="210" cy="680" rx="80" ry="60" fill="#E9C341"/>
+    <ellipse cx="190" cy="660" rx="30" ry="14" fill="#F6DD7A" opacity=".8"/>
+    <circle cx="290" cy="680" r="8" fill="#C9A22A"/>
+    <path d="M150 630c10-40 50-60 90-50-20 30-50 50-90 50z" fill="#55622F"/>
+  </g>
+  <g>
+    <circle cx="560" cy="690" r="70" fill="#F3EADA"/>
+    <circle cx="560" cy="690" r="60" fill="#F2CF7A"/>
+    <g stroke="#F3EADA" stroke-width="5">
+      <path d="M560 630v120M500 690h120M518 648l84 84M602 648l-84 84"/>
+    </g>
+    <circle cx="560" cy="690" r="10" fill="#F3EADA"/>
+  </g>
+  <ellipse cx="690" cy="700" rx="60" ry="46" fill="#E9C341" transform="rotate(-20 690 700)"/>
+  <path d="M640 520c20-30 60-36 80-20-20 26-50 30-80 20z" fill="#7A8B3A"/>
+</svg>

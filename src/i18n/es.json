@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "lang": "es",
+    "dir": "ltr",
+    "script": "latin",
+    "locale": "es_ES",
+    "intl_locale": "es-ES",
+    "price_format": "{price} €",
+    "decimal_separator": ","
+  },
+
+  "seo": {
+    "title": "Dar Zaytoun — Restaurante mediterráneo en Marsella",
+    "description": "Dar Zaytoun, mesa mediterránea en el corazón de Marsella: mezze, tajines y pescado a la brasa, productos de temporada y aceite de oliva de nuestros olivares asociados. Reserve en línea.",
+    "cuisine": "Mediterránea"
+  },
+
+  "brand": {
+    "name": "Dar Zaytoun"
+  },
+
+  "a11y": {
+    "skip_link": "Ir al contenido principal",
+    "home": "Dar Zaytoun, volver al inicio",
+    "main_nav": "Navegación principal",
+    "footer_nav": "Navegación del pie de página",
+    "lang_nav": "Elegir idioma",
+    "menu_open": "Abrir el menú",
+    "menu_close": "Cerrar el menú",
+    "close": "Cerrar"
+  },
+
+  "nav": {
+    "about": "Nosotros",
+    "menu": "Carta",
+    "gallery": "Galería",
+    "info": "Información",
+    "booking": "Reservar"
+  },
+
+  "hero": {
+    "eyebrow": "Cocina mediterránea · Marsella",
+    "title": "Dar Zaytoun",
+    "tagline": "La casa del olivo: una cocina generosa que une las dos orillas del Mediterráneo, de Túnez a Valencia.",
+    "cta_primary": "Reservar mesa",
+    "cta_secondary": "Ver la carta",
+    "image_alt": "Un arco morisco abierto al mar al atardecer, enmarcado por una rama de olivo."
+  },
+
+  "about": {
+    "eyebrow": "Nuestra casa",
+    "title": "Una cocina para compartir, nacida bajo el olivo",
+    "paragraphs": [
+      "«Zaytoun» significa aceituna en árabe. En torno a este árbol imaginó la chef Leïla Mansour Dar Zaytoun: una casa donde los platos se comparten como se comparten las historias.",
+      "Cada mañana trabajamos los productos del mercado, el pescado de la lonja y un aceite de oliva prensado en frío por nuestros olivares asociados. Las recetas viajan entre el Magreb, Grecia, Andalucía y la Provenza, sin olvidar nunca el sabor de lo sencillo."
+    ],
+    "signature": "Leïla Mansour, chef y fundadora",
+    "image_alt": "Ilustración de un viejo olivo de ramas retorcidas, enmarcado por un arco.",
+    "highlights": [
+      { "value": "2012", "label": "Apertura de la casa" },
+      { "value": "80 %", "label": "Productos locales y de temporada" },
+      { "value": "100 %", "label": "Hecho en casa, del pan a los postres" }
+    ]
+  },
+
+  "menu": {
+    "eyebrow": "La carta",
+    "title": "Sabores de las dos orillas",
+    "intro": "Una carta breve que cambia con las estaciones. Nuestros platos se comparten en el centro de la mesa.",
+    "note": "Precios en euros, servicio incluido. Información sobre alérgenos disponible: no dude en comunicarnos cualquier intolerancia.",
+    "veg_label": "Vegetariano",
+    "categories": {
+      "starters": "Entrantes",
+      "mains": "Principales",
+      "desserts": "Postres"
+    },
+    "items": {
+      "mezze": { "name": "Mezze de la casa", "desc": "Hummus, mutabal de berenjena ahumada, tabulé de perejil y pan pita caliente." },
+      "fattoush": { "name": "Ensalada fattoush", "desc": "Verduras crujientes, rábano, pan tostado, zumaque y melaza de granada." },
+      "brick": { "name": "Brik de huevo", "desc": "Hoja crujiente, huevo meloso, atún, alcaparras y harissa suave." },
+      "calamari": { "name": "Calamares a la plancha", "desc": "Chermoula, limón confitado y garbanzos asados." },
+      "tagine": { "name": "Tajine de cordero", "desc": "Guisado durante siete horas con ciruelas, almendras tostadas y sésamo." },
+      "couscous": { "name": "Cuscús de siete verduras", "desc": "Sémola trabajada a mano, caldo perfumado con ras el hanout." },
+      "sea_bream": { "name": "Dorada a la brasa", "desc": "Pescado de lonja, hinojo asado, aceite de oliva virgen y hierbas frescas." },
+      "chicken": { "name": "Pollo m'hammer", "desc": "Pollo de corral con limón confitado, aceitunas moradas y patatas melosas." },
+      "baklava": { "name": "Baklava de pistacho", "desc": "Masa filo, pistachos de Alepo y almíbar de azahar." },
+      "mhalabia": { "name": "Mhalabia de rosas", "desc": "Crema de leche perfumada con agua de rosas, pistachos y pétalos." },
+      "oranges": { "name": "Naranjas con canela", "desc": "Gajos de naranja, canela, hierbabuena fresca y dátiles." },
+      "gazelle": { "name": "Cuernos de gacela y té", "desc": "Pastas de almendra servidas con té a la menta." }
+    }
+  },
+
+  "gallery": {
+    "eyebrow": "Galería",
+    "title": "Un anticipo de la casa",
+    "intro": "Algunos momentos de Dar Zaytoun, entre la cocina y la terraza.",
+    "open_label": "Ampliar la imagen",
+    "dialog_label": "Visor de la galería",
+    "prev": "Imagen anterior",
+    "next": "Imagen siguiente",
+    "items": {
+      "terrace": { "caption": "La terraza al atardecer", "alt": "Un arco abierto al mar al atardecer, con una rama de olivo." },
+      "mezze": { "caption": "Mezze para compartir", "alt": "Vista cenital de varios cuencos de mezze de colores: hummus, tabulé, aceitunas y pan pita." },
+      "oil": { "caption": "Nuestro aceite de oliva", "alt": "Una botella de aceite de oliva, un platillo y una rama de olivo cargada de aceitunas." },
+      "tagine": { "caption": "El tajine del día", "alt": "Un tajine de barro decorado del que sale vapor." },
+      "spices": { "caption": "Especias y cítricos", "alt": "Limones y tres montoncitos de especias: pimentón, cúrcuma y comino." },
+      "zellige": { "caption": "Los azulejos zellige del comedor", "alt": "Motivo geométrico de zellige en estrellas, en tonos oliva, terracota y azafrán." }
+    }
+  },
+
+  "info": {
+    "eyebrow": "Información",
+    "title": "Venga a visitarnos",
+    "hours_title": "Horario",
+    "hours": [
+      { "days": "Lunes", "time": "Cerrado" },
+      { "days": "Martes – Viernes", "time": "12:00 – 14:30 · 19:00 – 22:30" },
+      { "days": "Sábado – Domingo", "time": "12:00 – 23:00, horario continuo" }
+    ],
+    "address_title": "Dirección",
+    "address_lines": ["18, quai des Oliviers", "13007 Marsella, Francia"],
+    "access": "Metro Vieux-Port, a 5 minutos a pie. Local accesible para personas con movilidad reducida.",
+    "contact_title": "Contacto",
+    "phone_label": "Teléfono",
+    "email_label": "Correo electrónico"
+  },
+
+  "booking": {
+    "eyebrow": "Reservas",
+    "title": "Reserve su mesa",
+    "intro": "Rellene este formulario y le confirmaremos la reserva por correo electrónico lo antes posible. Para grupos de más de 12 personas, llámenos directamente.",
+    "required_note": "Los campos marcados con * son obligatorios.",
+    "optional": "opcional",
+    "fields": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "date": "Fecha",
+      "time": "Hora",
+      "guests": "Número de personas",
+      "message": "Mensaje (alergias, ocasión especial…)",
+      "consent": "Acepto que mis datos se utilicen únicamente para gestionar mi solicitud de reserva."
+    },
+    "hints": {
+      "email": "Ejemplo: nombre@dominio.es",
+      "time": "Entre las 12:00 y las 22:30",
+      "guests": "De 1 a 12 personas"
+    },
+    "submit": "Enviar solicitud",
+    "sending": "Enviando…",
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "name": "Indique al menos 2 caracteres.",
+      "email": "Introduzca un correo electrónico válido, por ejemplo nombre@dominio.es.",
+      "phone": "Introduzca un número de teléfono válido.",
+      "date_past": "Elija una fecha a partir de hoy.",
+      "date_closed": "El restaurante cierra los lunes: elija otro día.",
+      "time": "Elija una hora entre las 12:00 y las 22:30.",
+      "guests": "El número de personas debe estar entre 1 y 12.",
+      "consent": "Acepte el uso de sus datos para continuar.",
+      "summary": "El formulario contiene {count} error(es). Corrija los campos indicados."
+    },
+    "success": "¡Gracias, {name}! Su solicitud para el {date} a las {time} ({guests} pers.) se ha enviado. Recibirá una confirmación por correo electrónico.",
+    "demo_note": "Sitio de demostración: no se envía ningún dato."
+  },
+
+  "footer": {
+    "tagline": "Cocina mediterránea para compartir, en el corazón de Marsella.",
+    "nav_title": "Navegación",
+    "contact_title": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "fictional": "Restaurante ficticio, creado como proyecto de portfolio.",
+    "back_to_top": "Volver arriba"
+  },
+
+  "not_found": {
+    "title": "Página no encontrada",
+    "link": "Volver al inicio"
+  }
+}
